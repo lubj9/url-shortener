@@ -1,0 +1,33 @@
+### Cria URL curta sem expiração
+POST http://localhost:8080/api/urls
+Content-Type: application/json
+
+{
+  "url": "https://www.mackenzie.br/graduacao/sistemas-de-informacao"
+}
+
+### Cria URL curta com expiração
+POST http://localhost:8080/api/urls
+Content-Type: application/json
+
+{
+  "url": "https://www.alura.com.br",
+  "expiresAt": "2026-12-31T23:59:59-03:00"
+}
+
+### Tentativa de XSS — DEVE ser rejeitada com 400
+POST http://localhost:8080/api/urls
+Content-Type: application/json
+
+{
+  "url": "javascript:alert('xss')"
+}
+
+### Redireciona (substitua "1" pelo código retornado na criação)
+GET http://localhost:8080/1
+
+### Consulta estatísticas
+GET http://localhost:8080/api/urls/1/stats
+
+### Deleta
+DELETE http://localhost:8080/api/urls/1
