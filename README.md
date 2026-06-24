@@ -142,6 +142,7 @@ docker run -p 8080:8080 \
 ```
 
 ### Testes
+<img width="1107" height="408" alt="TESTESMAVEN" src="https://github.com/user-attachments/assets/7eca31c2-3301-4445-a98e-60a83682aa01" />
 
 ```bash
 mvn test
@@ -152,6 +153,8 @@ mvn test
 ## 🌐 Endpoints
 
 ### Criar URL curta
+<img width="1425" height="912" alt="getapicode" src="https://github.com/user-attachments/assets/e3d40101-d4f7-4163-b506-522d68c21452" />
+
 
 ```bash
 curl -X POST http://localhost:8080/api/urls \
@@ -201,6 +204,8 @@ curl http://localhost:8080/api/urls/1/stats
 - `DELETE /api/urls/{code}` → `204 No Content`
 - URL com `expiresAt` no passado → `410 Gone` no redirect
 - URL com esquema `javascript:` → `400 Bad Request`
+  <img width="1132" height="914" alt="protocolojavascript" src="https://github.com/user-attachments/assets/c78d1964-5421-4a42-ad7a-85bc2c4f2380" />
+
 
 Há também o arquivo `requests.http` para testar via IntelliJ ou plugin REST Client do VS Code.
 
